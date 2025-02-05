@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+@keyframes spin_me{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.spin_me{
+  animation: spin_me 2s linear infinite;
+}
+
+.bg-dark  ::placeholder{
+  color: rgb(216, 216, 216);
+}

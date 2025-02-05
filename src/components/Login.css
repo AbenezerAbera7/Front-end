@@ -1,0 +1,15 @@
+.login-container {
+    background: #f5f5f5;
+}
+
+.login-form {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-weight: 600;
+}
+
+.text-center {
+    text-align: center;
+}
