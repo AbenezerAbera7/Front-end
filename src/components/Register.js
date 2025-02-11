@@ -70,7 +70,7 @@ const Register = () => {
             return;
         }
         try {
-            await axios.post('http://localhost:5000/api/register', credentials);
+            await axios.post('http://16.170.235.27:5000/api/register', credentials);
             setIsCodeSent(true);
             setStep(2);
         } catch (error) {
@@ -86,7 +86,7 @@ const Register = () => {
         e.preventDefault();
         setError('');
         try {
-            await axios.post('http://localhost:5000/api/verify', {
+            await axios.post('http://16.170.235.27:5000/api/verify', {
                 organization: credentials.organization,
                 email: credentials.email,
                 code: verificationCode,
@@ -103,7 +103,7 @@ const Register = () => {
 
     const handleResendCode = async () => {
         try {
-            await axios.post('http://localhost:5000/api/resend', { email: credentials.email });
+            await axios.post('http://16.170.235.27:5000/api/resend', { email: credentials.email });
             setIsCodeExpired(false);
             setTimer(900);
             setIsCodeSent(true);

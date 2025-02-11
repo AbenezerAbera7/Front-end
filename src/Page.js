@@ -5,7 +5,7 @@ import { Navbar, Nav, Container, ListGroup } from "react-bootstrap";
 // Service to fetch data
 async function fetchData(subdomain) {
     try {
-        const response = await fetch(`http://localhost:5000/api/websiteinfo?subdomain=${subdomain}`);
+        const response = await fetch(`http://16.170.235.27:5000/api/websiteinfo?subdomain=${subdomain}`);
         return await response.json();
     } catch (error) {
         console.error("Failed to fetch data:", error);

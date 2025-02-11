@@ -28,7 +28,7 @@ function Dashboard() {
     const fetchDashboardData = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:5000/api/me', {
+            const response = await fetch('http://16.170.235.27:5000/api/me', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

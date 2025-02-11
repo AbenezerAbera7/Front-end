@@ -16,7 +16,7 @@ const OrganizationList = () => {
   useEffect(() => {
     const fetchOrganizations = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/organizations', {
+        const response = await fetch('http://16.170.235.27:5000/api/organizations', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

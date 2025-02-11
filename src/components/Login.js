@@ -45,7 +45,7 @@ const Login = () => {
         setError('');
         setMessage('');
         try {
-            const response = await axios.post('http://localhost:5000/api/resend-login', { email });
+            const response = await axios.post('http://16.170.235.27:5000/api/resend-login', { email });
             setIsCodeExpired(false);
             setTimer(900);
             setIsCodeSent(true);
@@ -64,7 +64,7 @@ const Login = () => {
 
         try {
             const token = getToken();
-            const response = await fetch('http://localhost:5000/api/login', {
+            const response = await fetch('http://16.170.235.27:5000/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ const Login = () => {
         setMessage('');
 
         try {
-            const response = await axios.post('http://localhost:5000/api/verify-login', { email, password, code });
+            const response = await axios.post('http://16.170.235.27:5000/api/verify-login', { email, password, code });
             localStorage.setItem('token', response.data.token);
             setMessage(response.data.message);
             navigate('/dashboard');

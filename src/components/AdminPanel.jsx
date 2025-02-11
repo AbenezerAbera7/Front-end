@@ -47,7 +47,7 @@ function AdminPanel() {
     const fetchUsers = async () => {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:5000/api/users', {
+        const response = await fetch('http://16.170.235.27:5000/api/users', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ function AdminPanel() {
   useEffect(() => {
     const fetchOrganizations = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/organizations', {
+        const response = await fetch('http://16.170.235.27:5000/api/organizations', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ function AdminPanel() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/create_organization', {
+      const response = await fetch('http://16.170.235.27:5000/api/create_organization', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -144,7 +144,7 @@ function AdminPanel() {
 
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/create_user', {
+      const response = await fetch('http://16.170.235.27:5000/api/create_user', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -235,7 +235,7 @@ useEffect(()=>{
   const confirmDelete = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/users/${userIdToDelete}`, {
+      const response = await fetch(`http://16.170.235.27:5000/api/users/${userIdToDelete}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -264,7 +264,7 @@ useEffect(()=>{
   const confirmDeletePermanently = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/users/remove/${userIdToDelete}`, {
+      const response = await fetch(`http://16.170.235.27:5000/api/users/remove/${userIdToDelete}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -301,7 +301,7 @@ useEffect(()=>{
   const confirmRole = async ()=>{
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/users/role/${userIdToChange}`, {
+      const response = await fetch(`http://16.170.235.27:5000/api/users/role/${userIdToChange}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

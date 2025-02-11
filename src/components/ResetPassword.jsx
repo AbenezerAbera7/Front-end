@@ -19,7 +19,7 @@ const ResetPassword = () => {
 
     try {
       // Call API to send verification code to the email
-      const response = await fetch(`https://localhost:5000/api/send-verification-code`, {
+      const response = await fetch(`http://16.170.235.27:5000/api/send-verification-code`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -48,7 +48,7 @@ const ResetPassword = () => {
 
     try {
       // Call API to verify the code
-      const response = await fetch(`https://localhost:5000/api/verify-code`, {
+      const response = await fetch(`http://16.170.235.27:5000/api/verify-code`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, code: verificationCode }),
@@ -89,7 +89,7 @@ const ResetPassword = () => {
 
     try {
       // Call API to reset the password
-      const response = await fetch(`https://localhost:5000/api/reset-password`, {
+      const response = await fetch(`http://16.170.235.27:5000/api/reset-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

@@ -37,7 +37,7 @@ function PastScans({ organizationid }) {
   const fetchScanResults = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5001/api/scan_results', {
+      const response = await fetch('http://16.170.235.27:5001/api/scan_results', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ function PastScans({ organizationid }) {
   const confirmDelete = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5001/api/scan_results/${scanIdToDelete}`, {
+      const response = await fetch(`http://16.170.235.27:5001/api/scan_results/${scanIdToDelete}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -135,7 +135,7 @@ function PastScans({ organizationid }) {
     try {
       const token = localStorage.getItem('token');
       const jsontosend={fileUrl:filepath}
-      const response = await fetch(`http://localhost:5002/api/score/`, {
+      const response = await fetch(`http://16.170.235.27:5002/api/score/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -174,7 +174,7 @@ function PastScans({ organizationid }) {
   const handleView=async(fileUrl)=>{
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5002/api/read', {
+      const response = await fetch('http://16.170.235.27:5002/api/read', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -210,7 +210,7 @@ function PastScans({ organizationid }) {
   
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5002/api/export', {
+      const response = await fetch('http://16.170.235.27:5002/api/export', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

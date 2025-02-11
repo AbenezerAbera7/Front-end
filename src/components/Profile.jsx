@@ -48,7 +48,7 @@ const Profile = ({username,email}) => {
     try { 
       const token = localStorage.getItem('token');
 
-      const response = await fetch('http://localhost:5000/api/update',{
+      const response = await fetch('http://16.170.235.27:5000/api/update',{
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
